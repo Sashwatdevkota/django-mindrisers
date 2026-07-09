@@ -1,0 +1,58 @@
+# Django:
+
+Python framework, full stack development(frontend, backend)
+- battery included framework\
+- frontend: user interface
+-  backend: data, database, logic
+
+-2 projects:fullstack project , backend: api creation
+-MVT architecture
+-m: model -> database, tables, data, datatype
+-V: view -> logic, 
+-T: templates -> html, css pages
+
+#install virtual environment
+
+pip install virtualenv
+
+#create virtual environment this has to be done for each program
+python -m venv env 
+or, virtualenv env
+
+# <env> is just folder name
+
+#activate virtual env
+
+env\Scripts\activate (win)
+source env/Scripts/activate (ios)
+
+
+#install Django
+pip install Django
+
+-project: configuration : settings
+-app(application): functionalities : hosts, notification, payment
+ 
+ #To create a project
+
+ django-admin start project <projectname> . #here "." is optional and it changes the folder structure
+
+ without .
+
+ project:
+  -project
+  -manage.py
+
+with.
+
+project
+manage.py
+
+
+use: 
+  python manage.py 
+  to see every function you can do
+
+use: 
+  python manage.py runserver 
+   to see run server
