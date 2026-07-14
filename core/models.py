@@ -14,3 +14,18 @@ class Todolist(models.Model):
 
 # create table
 # python manage.py migrate
+
+# python shell
+# python manage.py shell
+
+# read all data from table
+# model_name.objects.all()
+# select * from model_name
+
+# add/create data
+# models.object.create(title="1",description="something")
+
+
+
+# models.object.create(title="2",description="something2")
+# models.object.create(title="3",description="something3",status-"True")
