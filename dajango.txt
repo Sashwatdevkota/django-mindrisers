@@ -56,3 +56,5 @@ use:
 use: 
   python manage.py runserver 
    to see run server
+
+#database tables
