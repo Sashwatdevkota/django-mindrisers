@@ -94,3 +94,4 @@ Todolist.objects.filter(title="new", status=False, field="...", field="..",.....
 
 # create new model: note: database
 # using shell add data
+
