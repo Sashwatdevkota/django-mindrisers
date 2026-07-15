@@ -7,7 +7,7 @@ class Todolist(models.Model):
     description = models.TextField()
     status = models.BooleanField(default=False)
 
-
+#git test
 class NoteApp(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
