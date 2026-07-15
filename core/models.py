@@ -8,9 +8,15 @@ class Todolist(models.Model):
     status = models.BooleanField(default=False)
 
 
+class NoteApp(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    date = models.DateField()
+
+
 # model_class -> create migration file in migrations folder -> database table
 # create migration file
-# -python manage.py makemigrations
+# 
 
 # create table
 # python manage.py migrate
@@ -24,7 +30,6 @@ class Todolist(models.Model):
 
 # add/create data
 # models.object.create(title="1",description="something")
-
 
 
 # models.object.create(title="2",description="something2")
