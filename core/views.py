@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Todolist
 
@@ -40,7 +40,23 @@ def contact(request):
 
 
 def create_task(request):
+    if request.method == "POST":
+        titles = request.POST.get("title")
+        descriptions = request.POST.get("description")
+        if titles == "" or descriptions == "":
+            context = {"error": "Both field are required"}
+            return render(request, "create.html", context)
+        # Todolist.objects.create(title=titles, description=descriptions)
+        # return redirect("/task/")
+
     return render(request, "create.html")
+
+
+def complete_task(request, id):
+    task = Todolist.objects.get(id=id)
+    task.status = True
+    task.save()
+    return redirect("/task/")
 
 
 def edit_task(request):
