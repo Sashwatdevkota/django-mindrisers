@@ -10,4 +10,7 @@ urlpatterns = [
     path("contact/", contact),
     path("learning/", learning),
     path("base/", base),
+    path("task/", task),
+    path("task/create/", create_task),
+    path("task/edit/", edit_task),
 ]

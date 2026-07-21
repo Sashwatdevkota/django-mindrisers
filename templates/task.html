@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Todolist{% endblock title %}
+
+{% block body %}
+<h2>Todolist</h2>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">S.no.</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for task in tasks %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{task.title}}</td>
+        <td>
+          {{task.description}}
+        </td>
+        <td>
+          {% if task.status%}
+          <span class="text-success">
+            Comleted
+          </span>
+          {% else %}
+          <span class="text-danger">
+            Pending
+          </span>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock body %}

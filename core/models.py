@@ -7,16 +7,20 @@ class Todolist(models.Model):
     description = models.TextField()
     status = models.BooleanField(default=False)
 
-#git test
+
+# git test
 class NoteApp(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
     date = models.DateField()
 
+    def __str__(self):
+        return self.title
+
 
 # model_class -> create migration file in migrations folder -> database table
 # create migration file
-# 
+#
 
 # create table
 # python manage.py migrate

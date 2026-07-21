@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Task{% endblock title %}
+
+{% block body %}
+
+<div class="container">
+</h1>Edit Task</h1>
+  <form>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Edit Title</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+
+      <div class="mb-3">
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">EditDescription</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-secondary">Update</button>
+  </form>
+</div>
+
+{% endblock body %}
+
+<!-- form for edit page -->

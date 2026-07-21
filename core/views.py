@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Todolist
 
 
 def index(request):
@@ -24,9 +25,23 @@ def home(request):
     return render(request, "home.html")
 
 
+def task(request):
+    task = Todolist.objects.all()
+    context = {"tasks": task}
+    return render(request, "task.html", context)
+
+
 def aboutus(request):
     return HttpResponse("Welcome this is About Us page.")
 
 
 def contact(request):
     return HttpResponse("Welcome this is Contact page.")
+
+
+def create_task(request):
+    return render(request, "create.html")
+
+
+def edit_task(request):
+    return render(request, "edit.html")
