@@ -13,6 +13,7 @@
         <th scope="col">Description</th>
         <th scope="col">Status</th>
         <th scope="col">Action</th>
+        <th scope="col">Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -38,7 +39,11 @@
           <a href=/task/mark/{{task.id}}/ class="btn btn-success">
             Change
           </a>
-
+        </td>
+        <td>
+          <a href=/task/delete/{{task.id}}/ class="btn btn-danger">
+            Delete
+          </a>
         </td>
       </tr>
       {% endfor %}

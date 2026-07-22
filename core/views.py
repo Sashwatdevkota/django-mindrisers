@@ -59,5 +59,11 @@ def complete_task(request, id):
     return redirect("/task/")
 
 
+def delete_task(request, id):
+    task = Todolist.objects.get(id=id)
+    task.delete()
+    return redirect("/task/")
+
+
 def edit_task(request):
     return render(request, "edit.html")
