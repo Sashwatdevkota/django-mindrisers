@@ -12,7 +12,7 @@ urlpatterns = [
     path("base/", base),
     path("task/", task),
     path("task/create/", create_task),
-    path("task/edit/", edit_task),
+    path("task/edit/<id>/", edit_task),
     path("task/mark/<id>/", complete_task),
     path("task/delete/<id>/", delete_task),
 ]
